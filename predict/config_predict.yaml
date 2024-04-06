@@ -1,0 +1,27 @@
+max_seq_len: 512
+lr: 1e-4  # 5e-6, 1e-5, 5e-5, 1e-4
+lr_finetune: 3e-6 # 5e-5
+epochs: 30
+epochs_finetune: 40
+
+# Transformer
+d_model: 768
+project_dimension: 512
+
+# Dataset
+dataset: QM7
+smile_vocab_path: ../pretrain/vocabulary/vocab_smile.json
+inchi_vocab_path: ../pretrain/vocabulary/vocab_inchi.json
+smile_vocab_bpe_path: ../pretrain/vocabulary/smile_vocab_bpe.txt
+smile_codes_path: ../pretrain/vocabulary/codes_smile
+vocab_size: 8102
+valid_ratio: 0.1
+test_ratio: 0.1
+batch_size: 12  # 24, 12, 8, 4, 2
+num_workers: 0  # 8
+
+# loss
+temperature: 0.07
+
+print_every_epochs: 50
+

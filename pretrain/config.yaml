@@ -1,0 +1,22 @@
+max_seq_len: 512
+lr: 1e-6  # 5e-6, 1e-5, 5e-5, 1e-4
+epochs: 10
+
+# Transformer
+d_model: 768
+project_dimension: 512
+
+# Dataset
+processed_smile_directory: tokenized_smile
+tokenized_inchi_directory : tokenized_inchi
+smile_vocab_path: vocabulary/vocab_smile.json
+inchi_vocab_path: vocabulary/vocab_inchi.json
+smile_vocab_bpe_path: vocabulary/smile_vocab_bpe.txt
+smile_codes_path: vocabulary/codes_smile
+vocab_size: 8102 # 8102
+valid_ratio: 0.001
+batch_size: 12  # 24, 12, 8, 4, 2
+num_workers: 0  # 8
+
+# loss
+temperature: 0.07
